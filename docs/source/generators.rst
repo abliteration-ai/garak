@@ -9,6 +9,7 @@ For a detailed oversight into how a generator operates, see :doc:`garak.generato
    :maxdepth: 2
 
    garak.generators
+   garak.generators.abliteration
    garak.generators.azure
    garak.generators.base
    garak.generators.bedrock
