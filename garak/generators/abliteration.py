@@ -1,4 +1,8 @@
-"""abliteration.ai API support"""
+"""abliteration.ai API support.
+
+Convenience wrapper around :class:`garak.generators.openai.OpenAICompatible`
+with abliteration.ai defaults.
+"""
 
 import base64
 
@@ -10,8 +14,10 @@ from garak.generators.openai import OpenAICompatible
 class AbliterationChat(OpenAICompatible):
     """Wrapper for abliteration.ai-hosted LLM models.
 
-    Expects ``ABLIT_KEY`` environment variable.
-    See https://abliteration.ai/docs/openai-compatibility for API details.
+    This presets the abliteration.ai API base URL and ``ABLIT_KEY`` so users can
+    select ``--target_type abliteration`` directly.
+
+    ``openai.OpenAICompatible`` can also target the same endpoint if preferred.
     """
 
     ENV_VAR = "ABLIT_KEY"
